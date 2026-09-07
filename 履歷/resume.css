@@ -110,8 +110,8 @@ h1 {
 }
 
 .profile-photo {
-    width: 36mm;
-    height: 45mm;
+    width: 34mm;
+    height: 42.5mm;
     object-fit: cover;
     object-position: center;
     display: block;
@@ -132,7 +132,7 @@ h1 {
     margin-top: 6mm;
 }
 
-.resume-section.compact-section {
+.resume-section.research-section {
     margin-top: 2mm;
 }
 
@@ -157,6 +157,11 @@ h1 {
     color: var(--text-dark);
     margin-bottom: 2mm;
     font-weight: 700;
+}
+
+.research-section h3 + p {
+    margin-top: 0;
+    margin-bottom: 3mm;
 }
 
 .date {
