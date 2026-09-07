@@ -13,7 +13,7 @@
     <nav class="nav-links">
       <a href="#about">About</a>
       <a href="#research">Research</a>
-      <a href="#fabrication">Fabrication</a>
+      <a href="#fabrication">Equipment</a>
       <a href="#blender">3D Modeling</a>
     </nav>
   </header>
@@ -25,16 +25,33 @@
         <div class="about-text">
           <h1>陳佑維 <span>You-Wei Chen</span></h1>
           <div class="contact">
-            <a href="tel:0989110270">0989110270</a><span>/</span>
-            <a href="mailto:chenyouwei1314@gmail.com">chenyouwei1314@gmail.com</a>
+            <a class="contact-item" href="tel:0989110270">
+              <svg class="contact-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 -960 960 960">
+                <path d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12Z"/>
+              </svg>
+              <span>0989110270</span>
+            </a>
+            <span class="contact-divider">|</span>
+            <a class="contact-item" href="mailto:chenyouwei1314@gmail.com">
+              <svg class="contact-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 -960 960 960">
+                <path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/>
+              </svg>
+              <span>chenyouwei1314@gmail.com</span>
+            </a>
           </div>
           <dl class="profile-list">
             <div><dt>Education</dt><dd>國立陽明交通大學 光電工程研究所 碩士生</dd></div>
+            <div><dt>Professor</dt><dd>郭浩中 教授</dd></div>
             <div><dt>Laboratory</dt><dd>智慧矽奈米光子技術實驗室</dd></div>
-            <div><dt>Research</dt><dd>High-NA Metalens / Metagrating / Genetic Algorithm Optimization</dd></div>
-            <div><dt>Work</dt><dd>鴻海研究院 工讀生｜元件量測、資料整理與研究支援</dd></div>
+            <div><dt>Research</dt><dd>High-NA Metalens / Inverse Design</dd></div>
+            <div><dt>Work</dt><dd>鴻海研究院 工讀生｜元件光學模擬、電性量測、資料整理與行政支援</dd></div>
           </dl>
-          <p class="lead">研究高 NA 超穎透鏡之 metagrating 設計與基因演算法最佳化，熟悉 Lumerical FDTD、Python 與 MATLAB，並具備微奈米製程、光電量測與數據分析經驗。希望建立從元件設計、模擬、製程到量測驗證的完整開發能力。</p>
+          <p class="lead">研究高 NA 超穎透鏡之 metagrating 設計與基因演算法最佳化，熟悉 Lumerical FDTD、Python 與 MATLAB，
+            並具備半導體製程、光電量測與數據分析經驗。希望建立從元件設計、模擬、製程到量測的完整開發能力。</p>
         </div>
         <div class="portrait-wrap"><img class="portrait" src="favicon.png" alt="You-Wei Chen"></div>
       </div>
@@ -45,9 +62,20 @@
       <div class="research-grid">
         <div class="panel image-panel"><img class="metalens-image" src="metalens illustration.png" alt="Metalens illustration"></div>
         <div class="panel research-text">
-          <article><h3>Metalens Principle</h3><p>超穎透鏡利用次波長尺度奈米結構調控局部相位，藉由空間相位梯度改變出射光的波前，使入射光在指定位置聚焦。相較傳統曲面透鏡，可利用平面奈米結構實現高數值孔徑與緊湊化光學元件。</p></article>
-          <article><h3>Metagrating Design</h3><p>依局部繞射條件將透鏡劃分為不同環帶，配置對應 unit-cell 結構，並考量最小線寬等製程限制，以兼顧高角度偏折能力與可製造性。</p></article>
-          <article><h3>Genetic Algorithm Optimization</h3><p>使用 Python 撰寫 Genetic Algorithm，最佳化奈米柱直徑、間距與相關幾何參數，再以 Lumerical FDTD 評估繞射與聚焦性能，建立自動化迭代最佳化流程。</p></article>
+          <article>
+            <h3>Metalens Principle</h3>
+            <p>超穎透鏡由一個個次波長奈米柱結構組成陣列，每一個奈米柱調控局部相位，藉由空間相位梯度改變出射光的波前，使入射光在指定位置聚焦。
+            相較傳統曲面透鏡，超穎透鏡具有微型化、易與其他奈米元件整合的優勢。</p>
+          </article>
+          <article>
+            <h3>Metagrating Design</h3>
+            <p>依局部繞射條件將透鏡劃分為一圈圈環帶，每一圈配置對應的 unit-cell 結構。</p>
+          </article>
+          <article>
+            <h3>Genetic Algorithm Optimization</h3>
+            <p>使用 Python 撰寫 Genetic Algorithm，將物種演化、物競天擇的方式應用於超穎透鏡，
+              最佳化奈米柱直徑、間距與相關幾何參數，再以 Lumerical FDTD 評估繞射與聚焦性能，建立自動化迭代最佳化流程。</p>
+          </article>
         </div>
       </div>
       <div class="panel flow-panel"><img src="GA flow.png" alt="Genetic algorithm optimization flow"></div>
@@ -57,20 +85,37 @@
       <div class="section-title"><span class="section-no">03</span><h2>Fabrication & Measurement</h2></div>
       <div class="skill-grid">
         <div class="panel skill-card">
-          <h3>Micro / Nano Fabrication</h3><p class="subtle">TSRI & NYCU Nano Facility</p>
-          <ul><li>Wet Bench</li><li>Spin Coater</li><li>PECVD</li><li>E-beam Lithography</li><li>Deep Si RIE</li><li>RTA</li><li>SEM</li><li>Ellipsometer</li><li>Dektak XT</li></ul>
+          <h3>Fabrication</h3>
+          <ul>
+            <li>Wet Bench</li>
+            <li>PECVD</li>
+            <li>Ellipsometer</li>
+            <li>Spin Coater</li>
+            <li>Ebeam</li>
+            <li>SEM</li>
+            <li>Deep Si RIE</li>
+            <li>Dektak XT</li>
+            <li>RTA</li>
+            <li>ICP</li>
+          </ul>
         </div>
         <div class="panel skill-card">
-          <h3>Measurement & Characterization</h3>
-          <ul><li>Optical Microscope (OM)</li><li>EL System</li><li>Integrating Sphere</li><li>Network Analyzer</li><li>U-4100</li></ul>
-          <p class="card-note">具備光學、電性與頻率響應等元件量測經驗，並能進行量測資料整理、比較與結果分析。</p>
+          <h3>Measurement</h3>
+          <ul>
+            <li>Optical Microscope (OM)</li>
+            <li>EL System</li>
+            <li>Integrating Sphere</li>
+            <li>Network Analyzer</li>
+            <li>U-4100</li>
+          </ul>
+          <p class="card-note">於 TSRI、奈米中心完成多項製程機台訓練，並具備光學、電性與頻率響應等元件量測經驗。</p>
         </div>
       </div>
     </section>
 
     <section id="blender" class="section">
       <div class="section-title"><span class="section-no">04</span><h2>3D Modeling & Experimental Visualization</h2></div>
-      <p class="section-intro">使用 Blender 建立光電量測設備與完整實驗架構之 3D 模型，用於研究簡報、量測架構視覺化與設備配置說明。</p>
+      <p class="section-intro">使用 Blender 繪製 3D 量測儀器與完整實驗架構，用於研究簡報、量測架構視覺化與儀器配置說明。</p>
       <div class="gallery-grid">
         <figure class="panel gallery-card"><img src="Laser.png" alt="C-band tunable laser 3D model"><figcaption>C-band Tunable Laser</figcaption></figure>
         <figure class="panel gallery-card"><img src="PC controller.png" alt="Polarization controller 3D model"><figcaption>Polarization Controller</figcaption></figure>

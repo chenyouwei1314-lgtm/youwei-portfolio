@@ -1,0 +1,295 @@
+/* =========================
+   Resume base
+   ========================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --blue: #1286bd;
+    --blue-dark: #0874a8;
+    --text: #4c4c4c;
+    --text-dark: #222;
+    --line: #1789bd;
+    --paper: #ffffff;
+    --screen-bg: #e8edf1;
+}
+
+html {
+    background: var(--screen-bg);
+}
+
+body {
+    font-family:
+        "Microsoft JhengHei",
+        "Noto Sans TC",
+        Arial,
+        sans-serif;
+    color: var(--text);
+    background: var(--screen-bg);
+    line-height: 1.65;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+
+.resume {
+    padding: 24px 0 40px;
+}
+
+.page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto 24px;
+    padding: 13mm 16mm 13mm;
+    background: var(--paper);
+    box-shadow: 0 3px 18px rgba(0, 0, 0, 0.12);
+    position: relative;
+}
+
+/* =========================
+   Header
+   ========================= */
+.resume-header {
+    min-height: 45mm;
+    margin-top: 2mm;
+    border-top: 3px solid var(--line);
+    padding-top: 10mm;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 18px;
+}
+
+.identity {
+    flex: 1;
+    padding-top: 2mm;
+}
+
+h1 {
+    color: var(--text-dark);
+    font-size: 31px;
+    line-height: 1.15;
+    letter-spacing: 0.04em;
+    margin-bottom: 14px;
+    font-weight: 700;
+}
+
+.contact-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 9px;
+    font-size: 14px;
+    color: #666;
+}
+
+.contact-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: #666;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.contact-item:hover {
+    color: var(--blue-dark);
+}
+
+.contact-icon {
+    width: 18px;
+    height: 18px;
+    fill: var(--blue);
+    flex: 0 0 auto;
+}
+
+.contact-divider {
+    color: #a7a7a7;
+}
+
+.profile-photo {
+    width: 36mm;
+    height: 45mm;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.profile-summary {
+    margin-top: 8mm;
+    margin-bottom: 8mm;
+    font-size: 14px;
+    line-height: 2;
+    text-align: justify;
+}
+
+/* =========================
+   Sections
+   ========================= */
+.resume-section {
+    margin-top: 6mm;
+}
+
+.resume-section.compact-section {
+    margin-top: 2mm;
+}
+
+.resume-section h2 {
+    color: var(--blue-dark);
+    font-size: 20px;
+    font-weight: 700;
+    border-top: 3px solid var(--line);
+    padding-top: 4mm;
+    margin-bottom: 4mm;
+}
+
+.section-body {
+    margin-top: 2mm;
+    margin-bottom: 8mm;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.section-body h3 {
+    font-size: 16px;
+    color: var(--text-dark);
+    margin-bottom: 2mm;
+    font-weight: 700;
+}
+
+.date {
+    margin-left: 8px;
+    font-weight: 400;
+    color: #626262;
+}
+
+ul {
+    padding-left: 6mm;
+}
+
+li {
+    padding-left: 1.5mm;
+    text-align: justify;
+}
+
+li::marker {
+    color: #595959;
+}
+
+/* =========================
+   Page 2 helpers
+   ========================= */
+.three-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 16mm;
+    margin-bottom: 0mm;
+}
+
+.two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 16mm;
+    margin-bottom: 8mm;
+}
+
+.section-note {
+    margin-top: 2mm;
+    font-size: 14px;
+    line-height: 2;
+    color: #666;
+    margin-bottom: 8mm;
+}
+
+.inline-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 22px;
+    padding-left: 1mm;
+}
+
+.inline-list span {
+    position: relative;
+    padding-left: 13px;
+}
+
+.inline-list span::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #595959;
+}
+
+/* =========================
+   Print
+   ========================= */
+@page {
+    size: A4;
+    margin: 0;
+}
+
+@media print {
+    html,
+    body {
+        background: #fff;
+    }
+
+    .resume {
+        padding: 0;
+    }
+
+    .page {
+        width: 210mm;
+        height: 297mm;
+        min-height: 297mm;
+        margin: 0;
+        padding: 13mm 16mm 13mm;
+        box-shadow: none;
+        break-after: page;
+        page-break-after: always;
+        overflow: hidden;
+    }
+
+    .page:last-child {
+        break-after: auto;
+        page-break-after: auto;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+}
+
+/* =========================
+   Small-screen preview
+   ========================= */
+@media screen and (max-width: 900px) {
+    .resume {
+        padding: 0;
+    }
+
+    .page {
+        width: 100%;
+        min-height: auto;
+        margin: 0;
+        padding: 28px 24px;
+        box-shadow: none;
+    }
+
+    .resume-header {
+        min-height: 0;
+    }
+
+    .profile-photo {
+        width: 100px;
+        height: 128px;
+    }
+
+    .two-column {
+        grid-template-columns: 1fr;
+        row-gap: 12px;
+    }
+}
