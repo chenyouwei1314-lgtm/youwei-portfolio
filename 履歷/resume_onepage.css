@@ -40,7 +40,8 @@ body{
 .resume-columns{
     display:grid;
     grid-template-columns:40% 60%;
-    min-height:273mm
+    min-height:273mm;
+    letter-spacing:.02em
 }
 
 .left-column{
