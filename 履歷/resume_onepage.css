@@ -40,7 +40,7 @@ body{
 .resume-columns{
     display:grid;
     grid-template-columns:40% 60%;
-    min-height:275mm
+    min-height:273mm
 }
 
 .left-column{
@@ -65,23 +65,23 @@ body{
     object-fit:cover;
     object-position:center;
     display:block;
-    margin-bottom:4mm
+    margin-bottom:2.5mm
 }
 
 .identity{
-    margin-bottom:3mm
+    gap:2.5mm;
+    margin-bottom:2.5mm
 }
 
 .identity h1{
     color:var(--text-dark);
     font-size:30px;
-    line-height:1.5;
+    line-height:1.8;
     letter-spacing:.04em;
     font-weight:700
 }
 
 .english-name{
-    margin-top:1mm;
     color:#666;
     font-size:14px
 }
@@ -239,11 +239,10 @@ li::marker{
         box-shadow:none
     }
     .one-page{
-        padding:28px 24px
+        padding:24px 24px
     }
     .resume-columns{
         grid-template-columns:1fr;
-        min-height:auto
     }
     .left-column{
         padding-right:0;
@@ -251,6 +250,6 @@ li::marker{
     }
     .right-column{
         padding-left:0;
-        margin-top:10mm
+        margin-top:8mm
     }
 }
