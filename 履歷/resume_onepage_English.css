@@ -28,7 +28,7 @@ body{
 
 .page{
     width:210mm;
-    min-height:297mm;
+    height:297mm;
     margin:0 auto 24px;
     background:var(--paper);
     box-shadow:0 3px 18px rgba(0,0,0,.12)
@@ -40,7 +40,7 @@ body{
 .resume-columns{
     display:grid;
     grid-template-columns:45% 55%;
-    min-height:273mm;
+    height:273mm;
     letter-spacing:.02em
 }
 
@@ -57,12 +57,11 @@ body{
     display:flex;
     flex-direction:column;
     align-items:flex-start;
-    margin-bottom:5mm
 }
 
 .profile-photo{
-    width:32mm;
-    height:40mm;
+    width:30mm;
+    height: 40mm;
     object-fit:cover;
     object-position:center;
     display:block;
@@ -70,21 +69,15 @@ body{
 }
 
 .identity{
-    gap:2.5mm;
     margin-bottom:2.5mm
 }
 
 .identity h1{
     color:var(--text-dark);
-    font-size:24px;
-    line-height:1.8;
+    font-size:22px;
+    line-height:1.5;
     letter-spacing:.04em;
     font-weight:700
-}
-
-.english-name{
-    color:#666;
-    font-size:14px
 }
 
 .contact-list{
@@ -106,8 +99,8 @@ body{
 }
 
 .contact-icon {
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
     fill: var(--blue);
     flex: 0 0 auto;
 }
